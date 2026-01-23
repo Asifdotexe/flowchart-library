@@ -1,0 +1,14 @@
+---
+config:
+  theme: redux-color
+---
+sequenceDiagram
+    autonumber
+    actor Asif
+    participant Local as Your Laptop (Local)
+    participant Remote as GitHub (Origin)
+
+    Asif->>Local: Commit changes
+    Local->>Remote: git push (Uploads commits)
+    Remote-->>Local: git fetch (Checks for updates)
+    Remote->>Local: git pull (Downloads & merges updates)
